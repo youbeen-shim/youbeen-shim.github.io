@@ -2376,7 +2376,17 @@ input, select, textarea {
 		ul li {
 			padding-left: 0.5em;
 		}
+/*
+		ul.sub {
+			list-style: disc;
+			padding-left: 0.5em;
+		}
 
+			ul.sub li {
+				border-top: solid 10px rgba(160, 160, 160, 0.3);
+				padding: 3em 0;
+			}
+*/
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
@@ -2561,9 +2571,9 @@ input, select, textarea {
 	}
 
 		ul.posts li {
-			border-top: dotted 1px rgba(160, 160, 160, 0.3);
-			margin: 1.5em 0 0 0;
-			padding: 1.5em 0 0 0;
+			/* border-top: dotted 1px rgba(160, 160, 160, 0.3); */
+			margin: 0em 0 0 0;
+			padding: 0em 0 0 0;
 		}
 
 			ul.posts li:first-child {
@@ -2590,8 +2600,8 @@ input, select, textarea {
 			ul.posts article .image {
 				display: block;
 				margin-right: 1.5em;
-				min-width: 4em;
-				width: 4em;
+				min-width: 3.5em;
+				width: 3.5em;
 			}
 
 				ul.posts article .image img {

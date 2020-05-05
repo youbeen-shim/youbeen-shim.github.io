@@ -1,27 +1,20 @@
-Future Imperfect by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Something that's been on my to-do list forever. My website, utilizing a blog-type format to post/list the things that I've
+deemed worthy enough
 
+To-do:
+	1. An auto-update program that can automatically re-queue the posts so that the posts are structured in reverse chronological order
+		a. Even in multi-page setting (front page)
+	2. Updates on posts :P
 
-It's been a long time coming, but I've finally gotten around to creating a brand new
-blog-style template (and the first since Striped, which came out waaaaay back in 2013).
-Anyway, Future Imperfect features a clean, expansive layout, a toggleable search box,
-and -- because pretty much all modern browsers can use it now -- a whole lot of flexbox
-action. Enjoy it :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
+	3. Finish landing pages for About Me; Highlights; Projects; Blogposts; Interviews
+	4. Add articles
+	5. Add projects
 
 
 Credits:
 
-	Demo Images:
-		Unsplash (unsplash.com)
+	Design:
+		HTML5up (html5up.net | @ajlkn)
 
 	Icons:
 		Font Awesome (fontawesome.io)

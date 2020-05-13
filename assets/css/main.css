@@ -3452,7 +3452,7 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 		overflow: hidden;
 		position: relative;
-		width: 16em;
+		width: 22em; /*16em*/
 	}
 
 		#intro .logo:before {
@@ -3472,7 +3472,7 @@ input, select, textarea {
 		#intro .logo img {
 			display: block;
 			margin-left: -1.3em;
-			width: 18em;
+			width: 24.75em; /*18em*/
 		}
 
 	#intro header h2 {

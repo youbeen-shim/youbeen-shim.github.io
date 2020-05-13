@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect design by HTML5 UP
+	Let's get those carbs
+	Modified and owned by Youbeen Shim
+-->
+<html>
+	<head>
+		<title>Scraps of Random Brain Activity by Youbeen Shim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Scraps of Random Brain Activity</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="landing_aboutme.html">About Me</a></li>
+							<!-- <li><a href="landing_highlights.html">Highlights</a></li> -->
+							<li><a href="landing_projects.html">Projects, old and new</a></li>
+							<li><a href="landing_blogposts.html">Blogposts</a></li>
+							<li><a href="landing_notebooks.html">Notebooks</a></li>
+							<li><a href="landing_interviews.html">Interviews</a></li>
+						</ul>
+					</nav>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+										<h1> Navigation </h1>
+										<!--
+										<li>
+											<a href="landing_highlights.html">
+												<h3>Highlights</h3>
+												<p>Things that I'm currently most excited to share (read - may not actually be exciting)</p>
+											</a>
+										</li>
+									  -->
+									<li>
+										<a href="landing_projects.html">
+											<h3>Projects</h3>
+											<p>Collection of various projects that I've been working on</p>
+										</a>
+									</li>
+									<li>
+										<a href="landing_blogposts.html">
+											<h3>Blogs</h3>
+											<p>Small-scale Exploratory Data Analysis and a break-down of my projects so you can follow along (if you'd like!)</p>
+										</a>
+									</li>
+									<li>
+										<a href="landing_notebooks.html">
+											<h3>Notebooks</h3>
+											<p>Notes, references, and thoughts on random topics of interest to me</p>
+										</a>
+									</li>
+									<li>
+										<a href="landing_interviews.html">
+											<h3>Interviews</h3>
+											<p>I love meeting interesting people and hearing about life, experiences, and advice - This is what they have to say</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="single.html">New Era of Statistics</a></h2>
+										<p>Pure-prediction algorithms and how they interact with and relate to classical statistics.</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2029-05-12">May 12, 2020</time>
+										<a href="landing_blogposts.html" class="author"><span class="name">Blogposts</span><img src="images/blogposts_logo.png" alt="" /></a>
+									</div>
+								</header>
+								<!-- <span class="image featured"><img src="images/blogposts/new_era/summary.jpg" alt="" /></span> -->
+								<p>
+									Before progressing any further, please do NOT mistake the contents of the work summarized below as my work.
+									They are from Professor <a href="https://en.wikipedia.org/wiki/Bradley_Efron">Bradley Efron</a> from Stanford University,
+									whom I look up to immensely and whose acheivements I can only dare to follow one day.
+									These are just extended notes from his lecture: <a href="https://statprize.org/pdfs/materials/2019Efron-presentation.pdf"> Prediction, Estimation, and Attribution</a>,
+									mainly for my benefit to reference later and edited for the benefit of others.
+								</p>
+								<p>
+									Today we discuss the new era of pure-prediction algorithms, the differences that these algorithms have from more classical statistical approach,
+									and how the landscape is changing to possibly accomodate for them. Below are a short list of different algorithms that each serve
+									a differnt purpose.
+								</p>
+								<blockquote>
+									<ul>
+										<li>Prediction: Random Forests. Boosting, Support Vector Machines, Neural Nets, Deep Learning</li>
+										<li>Estimation: Odinary Least Squares (OLS), Logistic Regression, Generalized Linear Model: Maximum Likelihood Estimation</li>
+										<li>Attribution (Significance): ANOVA, Lasso, Neyman-Pearson</li>
+									</ul>
+								</blockquote>
+								<p>
+									Perhaps if you are familiar with buzzwords from the data science world, you know some (or all) of the algorithms listed under the "Prediction" catagory.
+									These have gotten amazing public attention, and while still stemming from traditional regression theory, they can operate on an enormous scale and have
+									many popular successes.
+									Equivalently, if you are familiar with statistics, you may recall hearing some of the algorithms listed in the other two catagory.
+									These are some things that lasted the trials of time, something that we have come to depend on over the years.
+								</p>
+								<h3>Classical Statistics - A Summary</h3>
+								<p>
+									So let's first look at the approach of classical statistics. What do we care about? What are we trying to find out? Below is a representation of a
+									normal linear regression.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/nlr.jpg" alt="" /></span>
+								<p>
+									As the image indicates, what we ultimately discover is a surface with some noise (assumed to be independent and distributed with mean of zero and a variance
+									of sigma squared). Surface is really crucial: it is what we ultimately try to uncover, something that is buried under the noise. This is easy to see with an
+									example. Below, look at the representation of such scientific truth; Newton's Second Law: <i>Acceleration = Force / Mass</i>.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/newton.jpg" alt="" /></span>
+								<p>
+									And to the right, it is likely what Newton would have discovered, had he tried to conduct an experiment that led to his discovery. Here, again, lies the central
+									idea that statisticians have inherited: <b>There is a true, smooth, surface that represents the scientific truth; we will try to discover this by peering through
+									the noise down to the surface.</b>
+								</p>
+								<h3>New Era: Pure Prediction Algorithms</h3>
+								<p>
+									In the 21st century, with improved computational ability, better systemetic collection of data, and sweeping innovation, a new generation of algorithms are born.
+									As summarized below, they all take a similar general approach. Given the data, <i>d</i>, with a response variable <i>y</i>and a vector of <i>p</i> predictors represented
+									by <i>x</i>. Given the input, the algorithm creates a prediction rule, <i>f(x, d)</i>, where with a fresh set of input, <i>x</i>, it will generate a new <i>y hat</i> value.
+									These algorithms focusing on high predictive accuracy, and care about little else. This leads to some immaculate results and major weaknesses that we need to be mindful of.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/pred.jpg" alt="" /></span>
+								<p>
+									Let's take an instance. First, the problem statement. Over a period of one year, a data of 800 babies in an African facility were collected. 600 of these babies lived,
+									200 passed away. In classical statistics, we would normally approach this with a logistic regression. The independent variable being <i>y_i</i> where 1 and 0 used to indicate
+									baby dies or lives. We would take a (comparatively) small covariates, or features, of the baby and ultimately end with a predictive function along with linear logistic surface,
+									estimates, standard error, z-value, and p-value - indicating the contribution of the features to the model, inference about a population, impact of a particular feature, and
+									the level of confidence we have towards our statements.
+								</p>
+								<p>
+									We'll compare this with random forests, a widely popular machine learning algorithm focused on predictive power. Concept of <a href="#">random forests</a> are complex,
+									but simply put it is a bootstrapped regression tree. Regression trees looks through all the features available and all of it's possible values, choose a feature (and a
+									corresponding value of the feature) that best splits the data into two groups (i.e. as different as possible in the percentage of 1's and 0's).
+									Then, the same thing is done for subsequent groups until it reaches a certain stopping rule. Random forests elevates this idea with the use of bootstrapping,
+									something that Brad Efron is credited with. Basically, instead of 1 tree, bootstrap a sample from the original data lots of times (say, a thousand) to create a lot of trees,
+									and then predict by putting it to a majority vote between all the trees. If a new baby is born, the data collected from them will go through the thousand different trees, and
+									we'll make a prediction that the baby will live if the majority of the trees think so (Which kinda sounds like witchcraft but that's just how I like my statistics).
+								</p>
+								<p>
+									Let's look at a new exaple. In Prostate cancer microarray study, we have a sample of 100 men, 50 with prostate cancer and 50 without (control). For each man, 6033 features
+									of their genes are measured (<i>p = 6033</i>). Data then is 100 x 6033 matrix, what is known as a "wide" dataset. We want to obtain a prediction rule <i>f(x, d)</i> that
+									can take a new 6033-vector <i>x</i> and outputs <i>y hat</i> that correctly predicts cancer vs normal. When random forests are applied to this data with a 50/50 split between
+									test and training sets (with proportion of 25 with cancer and 25 without), below results can be obtained. Red is the test error rate, black is a training error rate obtained
+									through cross-validation. After about 200 trees, the algorithm can accurately predict 49 out of 50 people from the test set - an amazing performance.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/randomforest.jpg" alt="" /></span>
+								<h3>Prediction is Easier than Estimation & Attribution</h3>
+								<p>
+									It's true! Let's explore. First, estimation. Suppose we observe x_1 through x_25 independent normal numbers with unknown mean mu and variance 1. Then we use two summary statistics
+									to estimate mu: the mean and the median. As is commonly known, median performs much worse than the mean at this. In fact, ratio of squared errors is 1.57, implying that it is more
+									than 50% worse to use the median instead of the mean. However, if we instead only wished to do prediction, the ratio improves significantly. It only costs 2% more to use an inefficient
+									estimate (See below). This allows great freedom in designing prediction algorithms -you don't have to be as fussy about picking out good estimators.
+								</p>
+								<p>
+									Attribution is all about picking the important features. Thinking about our cancer microarray example, it would be something like "which genes were the important ones in diagonising
+									the patients with cancer?". For prediction, the central question would be more like "how few genes do you need in order to perform well?".
+									Prediction can acheive great performance with simply squared of the number of genes being studied, attribution needs to explore all possibilities. In other words, if there were
+									100,000 genes, prediction only needs 300~400 genes, attribution requires us to study all of them. The reason for this is that prediction has an important feature: it allows accrual
+									of "weak learners". In contrast, in attribution you are looking for individual strong learners.
+								</p>
+								<h3>So why not use these new algorithms?</h3>
+								<p>
+									1 wrong out of a test sample of 50 is really impressive! So why aren't we using it for scientific studies?
+								</p>
+								<p>
+									The results are certainly impressive, and should definitely look further into applying this algorithm for diagnosis. However, the results don't really contribute much for
+									scientific understanding. To illustrate this, we can look at the "feature importance" measure that a lot of machine learning algorithms can generate. Below is the result
+									after running such a function for the random forest algorithm on prostate cancer data.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/featureimportance.jpg" alt="" /></span>
+								<p>
+									Approximately 1400 out of the 6033 genes were said to be important, with two genes, #1022 and #5569, standing out on the top as you can see on the left side of the above graph.
+									However, when those genes were taken out, the algorithm created a predictive function that still made only 1 error out of 50 in the test set. In fact, the algorithm performed
+									just as well when the top 10, top 50, top 100, and top 500 genes were taken out. The thing is, the algorithm does precisely does what we said it does: <b>they are accuruing
+									a lot of weak learners to result in a strong performance</b>. This makes is really difficult, if not impossible, to point out critical genes in a scientific study.
+								</p>
+								<h3>Are the Test Sets Really a Good Set?</h3>
+								<p>
+									Perhaps an even more critical question is this: is a test set really a good set? This is already widely known, prediction is highly context dependent and fragile. Let's try a
+									more realistic scenario with the prostate cancer example. Instead of randomly dividing the subjects from the sample of 100, we take the first 50 subjects (still divided into
+									25 with prostate cancer and 25 without) as the training set, and later 50 as the test set. This simulates the scenario where the model is created, then is later used to diagonise
+									new patients. The results are below.
+								</p>
+								<span class="image center"><img src="images/blogposts/new_era/randomforest2.jpg" alt="" /></span>
+								<p>
+									We see that while the training set error is down to 0%, the test set error stabilizes around 24% with no further improves even with more trees. Approximately 12 out of 50 test
+									cases were erronious. Possibly things changed during the experiment (known as "Conceive Drift"). This is not uncommon: Google flu predictor famously beat CDC's model for 3 years
+									only for it to fail miserably the next year (find source).
+								<h3>Summary</h3>
+								<p>
+									Science, historically, has been a search for the underlying truths that run our universe. This is really the core of estimation and attribution. This isn't to say that the
+									prediction algorithms do not do this, but they are more famiously (and successfully) applied in situations that are more ephemeral ("lasting for a short time" including the
+									definition here because I also had to look this up): Movie recommendations, Facial recognitions, and the like.
+									The ability to extract useful information from the ephemeral dataset is very strong, but not necessarily a positive for
+									seeking the scientific predictions. We can further extend this by noting that estimation and attribution orients towards theoretical optimality, instead of the pure training-test
+									performance acheivement that prediction algorithms strive for. Again, not a negative, but requires more situational awareness. In the end, this all goes back to what is
+									seemingly a permiating topic in statistics: use what is fitting for the situation.
+								</p>
+								<p>
+									With that, I'm out for today. Stay tuned for updates on <a href="#">Overview of Differences in Estimation and Prediction Algorithms</a> and
+									<a href="#">Estimation and Attribution in the "Wide-Data" Era</a>.
+								</p>
+								<footer>
+									<ul class="stats">
+										<li><a href="landing_blogposts.html">Forwards from Kafadar</a></li>
+										<li><a href="https://stanford.app.box.com/s/v4cvbds3ftoaq249j1y4d665refvonel">Credits</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="landing_aboutme.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/youbeen-shim" class="icon brands fa-github-alt"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/youbeen-shim/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="landing_aboutme.html" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/youbeanz/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Scraps of Random Brain Acivity by Youbeen Shim. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

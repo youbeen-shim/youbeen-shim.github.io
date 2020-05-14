@@ -142,13 +142,13 @@
 									So let's first look at the approach of classical statistics. What do we care about? What are we trying to find out? Below is a representation of a
 									normal linear regression.
 								</p>
-								<span class="image center"><img src="../images/blogposts/nlr.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/nlr.png" alt="" /></span>
 								<p>
 									As the image indicates, what we ultimately discover is a surface with some noise (assumed to be independent and distributed with mean of zero and a variance
 									of sigma squared). Surface is really crucial: it is what we ultimately try to uncover, something that is buried under the noise. This is easy to see with an
 									example. Below, look at the representation of such scientific truth; Newton's Second Law: <i>Acceleration = Force / Mass</i>.
 								</p>
-								<span class="image center"><img src="../images/blogposts/newton.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/newton.png" alt="" /></span>
 								<p>
 									And to the right, it is likely what Newton would have discovered, had he tried to conduct an experiment that led to his discovery. Here, again, lies the central
 									idea that statisticians have inherited: <b>There is a true, smooth, surface that represents the scientific truth; we will try to discover this by peering through
@@ -161,7 +161,7 @@
 									by <i>x</i>. Given the input, the algorithm creates a prediction rule, <i>f(x, d)</i>, where with a fresh set of input, <i>x</i>, it will generate a new <i>y hat</i> value.
 									These algorithms focusing on high predictive accuracy, and care about little else. This leads to some immaculate results and major weaknesses that we need to be mindful of.
 								</p>
-								<span class="image center"><img src="../images/blogposts/pred.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/pred.png" alt="" /></span>
 								<p>
 									Let's take an instance. First, the problem statement. Over a period of one year, a data of 800 babies in an African facility were collected. 600 of these babies lived,
 									200 passed away. In classical statistics, we would normally approach this with a logistic regression. The independent variable being <i>y_i</i> where 1 and 0 used to indicate
@@ -185,7 +185,7 @@
 									test and training sets (with proportion of 25 with cancer and 25 without), below results can be obtained. Red is the test error rate, black is a training error rate obtained
 									through cross-validation. After about 200 trees, the algorithm can accurately predict 49 out of 50 people from the test set - an amazing performance.
 								</p>
-								<span class="image center"><img src="../images/blogposts/randomforest.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/randomforest.png" alt="" /></span>
 								<h3>Prediction is Easier than Estimation & Attribution</h3>
 								<p>
 									It's true! Let's explore. First, estimation. Suppose we observe x_1 through x_25 independent normal numbers with unknown mean mu and variance 1. Then we use two summary statistics
@@ -209,7 +209,7 @@
 									scientific understanding. To illustrate this, we can look at the "feature importance" measure that a lot of machine learning algorithms can generate. Below is the result
 									after running such a function for the random forest algorithm on prostate cancer data.
 								</p>
-								<span class="image center"><img src="../images/blogposts/featureimportance.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/featureimportance.png" alt="" /></span>
 								<p>
 									Approximately 1400 out of the 6033 genes were said to be important, with two genes, #1022 and #5569, standing out on the top as you can see on the left side of the above graph.
 									However, when those genes were taken out, the algorithm created a predictive function that still made only 1 error out of 50 in the test set. In fact, the algorithm performed
@@ -223,7 +223,7 @@
 									25 with prostate cancer and 25 without) as the training set, and later 50 as the test set. This simulates the scenario where the model is created, then is later used to diagonise
 									new patients. The results are below.
 								</p>
-								<span class="image center"><img src="../images/blogposts/randomforest2.jpg" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/randomforest2.png" alt="" /></span>
 								<p>
 									We see that while the training set error is down to 0%, the test set error stabilizes around 24% with no further improves even with more trees. Approximately 12 out of 50 test
 									cases were erronious. Possibly things changed during the experiment (known as "Conceive Drift"). This is not uncommon: Google flu predictor famously beat CDC's model for 3 years

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect design by HTML5 UP
+	Let's get those carbs
+	Modified and owned by Youbeen Shim
+-->
+<html>
+	<head>
+		<title>Scraps of Random Brain Activity by Youbeen Shim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">Scraps of Random Brain Activity</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../landing_aboutme.html">About Me</a></li>
+							<!-- <li><a href="../landing_highlights.html">Highlights</a></li> -->
+							<li><a href="../landing_projects.html">Projects, old and new</a></li>
+							<li><a href="../landing_blogposts.html">Blogposts</a></li>
+							<!-- <li><a href="../landing_notebooks.html">Notebooks</a></li> -->
+							<!-- <li><a href="../landing_interviews.html">Interviews</a></li> -->
+						</ul>
+					</nav>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+										<h1> Navigation </h1>
+										<!--
+										<li>
+											<a href="../landing_highlights.html">
+												<h3>Highlights</h3>
+												<p>Things that I'm currently most excited to share (read - may not actually be exciting)</p>
+											</a>
+										</li>
+									  -->
+									<li>
+										<a href="../landing_projects.html">
+											<h3>Projects</h3>
+											<p>Collection of various projects that I've been working on</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_blogposts.html">
+											<h3>Blogs</h3>
+											<p>Small-scale Exploratory Data Analysis and a break-down of my projects so you can follow along (if you'd like!)</p>
+										</a>
+									</li>
+									<!--
+									<li>
+										<a href="../landing_notebooks.html">
+											<h3>Notebooks</h3>
+											<p>Notes, references, and thoughts on random topics of interest to me</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_interviews.html">
+											<h3>Interviews</h3>
+											<p>I love meeting interesting people and hearing about life, experiences, and advice - This is what they have to say</p>
+										</a>
+									</li>
+									-->
+								</ul>
+							</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="gait.html">Strength Training as Treatment for Cerenral Palsy</a></h2>
+										<p>Gait analysis of children with cerebral palsy and the relationship between lower-body strength and walking speed.</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2020-01-30">Jan 30, 2020</time>
+										<a href="../landing_blogposts.html" class="author"><span class="name">Blogposts</span><img src="../images/blogposts_logo.png" alt="" /></a>
+									</div>
+								</header>
+								<!-- <span class="image center"><img src="../images/blogposts/new_era/new_era/summary.jpg" alt="" /></span> -->
+								<h3>Summary</h3>
+								<p>Cerebral palsy (henceforth "CP") is a non-progressive neurological disorder that primarily affects body movement and muscle coordination. Approximately two out of every thousand newborn children develop CP and to this date, there is no cure. This report discusses the relationship between the lower-body strength of the child with CP and their walking speed. As the risk involved with the strength-training treatment is low if not non-existent with proper care, even the slightest positive significant correlation should suggest the value of strength training. </p>
+								<p>Based on the study, there appears to be a strong relationship between strength and walking speed. This holds especially for those with Gross Motor Function Classification System (henceforth "GMFCS") Level 1, whether the CP is diplegic or hemiplegic. However, the strength of the relationship decays drastically for increasing GMFCS Levels. For those with GMFCS Levels of 3 or higher, possible benefits of the strength training appears to be negligible. </p>
+								<h3>Introduction</h3>
+								<p>Prof. Mark Conaway (henceforth "Client") requested that two questions be answered:</p>
+								<blockquote>
+								<ol>
+									<li>Is there a [significant] relationship between strength and walking speed, with/without adjustment for height, weight, and/or BMI?</li>
+									<li>Does the strength of this association depend on the severity of the type of CP?</li> <br>
+									Additionally, the Client also requested that secondary question be looked into:
+									<li>Generally, a walking speed of 80 is considered 'adequate for community dwelling'. Is there an association between adequate walking speed and strength, and does this association depend on the type and severity of CP?</li>
+								</ol>
+								</blockquote> 
+								<p>These questions are appropriate for the Client's best interests regarding the Client's current data and future goals of possibly implementing strength training exercises for children suffering from CP. Thus, the objectives of the current report will be on addressing those questions in detail in hopes of benefitting the Client the children.</p>
+								<p>As both the data and the objectives are straightforward, simple yet enlightening measures such as linear regression and various regression analysis appear to be the most adequate for the Client's current and possible concerns. </p>
+								<h3>Approaches</h3>
+								<p>An important step in the analysis was the engineering of the variables being considered. Factors that may carry a strong significance in both walking speed and strength, such as height and BMI, are eliminated by regressing strength and walking speed on influential variables, followed by regressing strength on walking speed. This effectively removes the variables that may cause multicollinearity. Then, the variables were grouped and sorted to analyze the relationship with GMFCS Level in mind. </p>
+								<p>Initially, strength was regressed on walking speed without any adjustments. Then, both variables were later regressed independently on height and BMI to remove those variables that are in play. Later, the age variable (adjusted for height and BMI) also found to hold significance. Thus, the final general regression was strength and age on walking speed, all variables adjusted for height.</p>
+								<p>For the second part of the main question, 4 separate groups were considered. Namely, GMFCS Level 1 with Hemiplegia (both left side or right side), GMFCS Level 1 with Diplegia, GMFCS Level 2 with Diplegia, and GMFCS Level 3 with Diplegia. Hemiplegia at GMFCS Levels 2 and 3 was too infrequent for that conclusion to be significant. </p>
+								<h3>Results</h3>
+								<p>Initial regression of strength to walking speed held no observable strong relationship. However, by eliminating the effects that height had on both of the variables, a solid relationship appears.<sup>1, 2</sup></p>
+								<p><sub>1) WSNoHeight = Walking speed without height</sub><br><sub>2) StrengthNoHeight = Strength without height</sub></p>
+								<span class="image center"><img src="../images/blogposts/gait/a.PNG" alt="" /></span>
+								<p>Age, in combination with strength, also suggests a significant relationship.<sup>3</sup></p>
+								<p><sub>3) AgeNoHeight = Age without height</sub></p>
+								<span class="image center"><img src="../images/blogposts/gait/b.PNG" alt="" /></span>
+								<p>Then, the children are stratified by GMFCS Levels and the condition (diplegia vs hemiplegia).</p>
+								<h6>GMFCS Level 1 - Hemiplegia:</h6>
+								<p>The relationship between strength (as well as age) on walking speed is strong.</p>
+								<span class="image center"><img src="../images/blogposts/gait/c.PNG" alt="" /></span>
+								<h6>GMFCS Level 1 - Diplegia:</h6>
+								<p>The relationship between strength (as well as age) on walking speed is strong. </p>
+								<span class="image center"><img src="../images/blogposts/gait/d.PNG" alt="" /></span>
+								<h6>GMFCS Level 2 - Diplegia:</h6>
+								<p>The relationship between strength (as well as age) on walking speed is strong but begins to drop in comparison to GMFCS Level 1. Also note that while the data for GMFCS Level 2 - Hemiplegia were insufficient, evidence suggests that they will also benefit from the strength training program.</p>
+								<span class="image center"><img src="../images/blogposts/gait/e.PNG" alt="" /></span>
+								<h6>GMFCS Level 3 - Diplegia:</h6>
+								<p>The relationship between strength (as well as age) on walking speed is no longer strong, there is little evidence that strength will assist the walking speed of those with GMFCS Level 3 CP. It is worth noting that the time spent on strength-training treatment is not recorded. Thus, it is impossible to know whether or not if the treatment would have shown more results with more time. All that is known is that the treatment administered was not enough to show statistically significant results.</p>
+								<span class="image center"><img src="../images/blogposts/gait/f.PNG" alt="" /></span>
+								<h3>Conclusion</h3>
+								<p>Two of the major concerns regarding the data on children with CP were adequately addressed. While bias may be present, the strong results suggest that those biases are negligible. The regressions show that there exists a strong relationship between strength and walking speed overall. Also, the GMFCS Level, as expected, played a huge impact. The relationship quickly weakened with each GMFCS Level, and data suggests that there is little evidence that those with GMFCS Level of 3 or higher are likely to benefit from strength training.</p>
+								<p>The dataset for the current report could be improved through more rigorous data on areas of muscle and more specific information, such as leg length instead of standing height and time spent on treatment to track ongoing progress. The major concerns of bias were the lack of random selection and the focused region that the data was collected.</p>
+								<p>Construction of a strength training treatment for children suffering from CP with a GMFCS Level of 1 or 2 is recommended. </p>
+								<footer>
+									<ul class="stats">
+										<li><a href="../landing_blogposts.html">Statistical Consulting</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="../landing_aboutme.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/youbeen-shim" class="icon brands fa-github-alt"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/youbeen-shim/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="../landing_aboutme.html" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/youbeanz/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Scraps of Random Brain Acivity by Youbeen Shim. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

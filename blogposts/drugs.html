@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect design by HTML5 UP
+	Let's get those carbs
+	Modified and owned by Youbeen Shim
+-->
+<html>
+	<head>
+		<title>Scraps of Random Brain Activity by Youbeen Shim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">Scraps of Random Brain Activity</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../landing_aboutme.html">About Me</a></li>
+							<!-- <li><a href="../landing_highlights.html">Highlights</a></li> -->
+							<li><a href="../landing_projects.html">Projects, old and new</a></li>
+							<li><a href="../landing_blogposts.html">Blogposts</a></li>
+							<!-- <li><a href="../landing_notebooks.html">Notebooks</a></li> -->
+							<!-- <li><a href="../landing_interviews.html">Interviews</a></li> -->
+						</ul>
+					</nav>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+										<h1> Navigation </h1>
+										<!--
+										<li>
+											<a href="../landing_highlights.html">
+												<h3>Highlights</h3>
+												<p>Things that I'm currently most excited to share (read - may not actually be exciting)</p>
+											</a>
+										</li>
+									  -->
+									<li>
+										<a href="../landing_projects.html">
+											<h3>Projects</h3>
+											<p>Collection of various projects that I've been working on</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_blogposts.html">
+											<h3>Blogs</h3>
+											<p>Small-scale Exploratory Data Analysis and a break-down of my projects so you can follow along (if you'd like!)</p>
+										</a>
+									</li>
+									<!--
+									<li>
+										<a href="../landing_notebooks.html">
+											<h3>Notebooks</h3>
+											<p>Notes, references, and thoughts on random topics of interest to me</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_interviews.html">
+											<h3>Interviews</h3>
+											<p>I love meeting interesting people and hearing about life, experiences, and advice - This is what they have to say</p>
+										</a>
+									</li>
+									-->
+								</ul>
+							</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="drugs.html">Cancer Treatments: Bevacizumab and PD901</a></h2>
+										<p>The effect of combining bevacizumab with PD901 in limiting cell growth in vitro.</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2020-04-17">Apr 17, 2020</time>
+										<a href="../landing_blogposts.html" class="author"><span class="name">Blogposts</span><img src="../images/blogposts_logo.png" alt="" /></a>
+									</div>
+								</header>
+								
+								<h3>Summary</h3>
+								<p>Bevacizumab, otherwise known as Avastin, is a medication used to treat a variety of types of cancers. In the study conducted by the client (Prof. Mark Conaway), an experiment using 4 doses of bevacizumab {0, 0.05, 0.10, and 0.25 mm} and 4 doses of PD901 {0, 0.005, 0.01, and 0.025 mm} were run with 3 biological replicates. The main objective of this statistical study is to determine whether bevacizumab and PD901 act additively in inhibiting cell growth.</p>
+								<p>Analysis of the client's dataset uncovered noteworthy results. Statistical modeling supports that bevacizumab and PD901 do act additively in inhibiting cell growth. However, the additive effects are not constant. The synergy of the two drugs grows strong or weaker based on the different combinations of dosage.</p>
+								<h3>Introduction</h3>
+								<p>Bevacizumab is widely used to treat a number of types of cancers such as colon cancer, lung cancer, ovarian cancer, and glioblastoma. Bevacizumab, by inhibiting the development of new blood vessels, effectively inhibits cell growth.</p>
+								<p>The experiment was conducted as separate experiments on each of the 3 days. Varying dosage for both bevacizumab {0, 0.05, 0.10, and 0.25 um} and PD901 {0, 0.005, 0.01, and 0.025 um} were used. For each combination, three biological replicates were run. The data consists of 144 measurements of cell counts.</p>
+								<p>The primary objective of this study is to determine whether bevacizumab and PD901 act additively in inhibiting cell growth. The secondary objective is to discover points of maximum and minimum synergy and to create an effective model for communicating the varying degrees of synergy.</p>
+								<h3>Prior to Analysis</h3>
+								<p>The data provided by the client consisted of three sections that are titled "Lap Bez", "PD Bez", and "Lap LY". When multiple models are displayed, the graphs will always follow that respective order. Note that the size of the data is far too small to create a pertinent confidence interval fit for a notched box plot. If notched box plots were to be used, all or most notches (i.e. the confidence intervals for the median) will overlap. Thus, this study will utilize a regular box plot and rely on the precision of the experiment in reaching the conclusion. All the cell counts for technical triplicates are averaged to a single value.</p>
+								<h3>Approaches and Results</h3>
+								<p>Figure A-i, A-ii, and A-iii displays the respective Boxplots of All Conditions. Along with Figure B-i, B-ii. and B-iii (Boxplots of Different Repetitions), Figure A serves to describe the state of the data before normalization. Prior to normalization, there appear to be significant differences along with the replications.</p>
+								<span class="image center"><img src="../images/blogposts/drugs/A.PNG" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/drugs/B.PNG" alt="" /></span>
+								<p>However, as can be seen with Figure C-i, C-ii, and C-iii (Boxplots of Normalized Different Repetitions), the replications within the sections are not significantly different from one another.</p>
+								<p>Note that normalizing in this study indicates the division of all values by the mean of the initial cell count when neither of the drugs was applied.</p>
+								<span class="image center"><img src="../images/blogposts/drugs/C.PNG" alt="" /></span>
+								<p>Following the normalization of the data, the predicted cell decrease rate based on the drugs alone was calculated. This study defines the synergy of the two drugs to be this predicted value, Bliss, minus the actually observed decrease in the cell count.</p>
+								<p>Figures D-i, D-ii, and D-iii displays the boxplot of the bliss of each respective combination of the drugs. </p>
+								<span class="image center"><img src="../images/blogposts/drugs/D-1.PNG" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/drugs/D-2.PNG" alt="" /></span>
+								<p>Accordingly, Figure E-i, E-ii, and E-iii display a boxplot of the synergy for Lap-Bez, PD-Bez, and LY-Lap, respectively.</p>
+								<span class="image center"><img src="../images/blogposts/drugs/E.PNG" alt="" /></span>
+								<p>The respective mean and maximum values of the synergies according to drug combinations are as follows.</p>
+								<span class="image center"><img src="../images/blogposts/drugs/F.PNG" alt="" /></span>
+								<p>It can be observed that Lap-Bez has both the highest mean of the highest maximum value of synergy. This can also be observed in Figure G-i, G-ii, and G-iii, histograms of respective synergy values. </p>
+								<span class="image center"><img src="../images/blogposts/drugs/G.PNG" alt="" /></span>
+								<h3>Conclusion</h3>
+								<p>The observations made in this study strongly suggest that bevacizumab and PD901 do act additively in inhibiting cell growth. While synergy may fluctuate depending on the dosage and combination of drugs, the cell reduction rate for any observation was higher than would have occurred independently. </p>
+								<p>We recommend that further research focusing specifically on bevacizumab and PD901 with more samples be conducted to further establish the finding. </p>
+								<footer>
+									<ul class="stats">
+										<li><a href="../landing_blogposts.html">Statistical Consulting</a></li>
+									</ul>
+								</footer>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="../landing_aboutme.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/youbeen-shim" class="icon brands fa-github-alt"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/youbeen-shim/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="../landing_aboutme.html" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/youbeanz/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Scraps of Random Brain Acivity by Youbeen Shim. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

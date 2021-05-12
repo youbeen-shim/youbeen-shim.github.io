@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect design by HTML5 UP
+	Let's get those carbs
+	Modified and owned by Youbeen Shim
+-->
+<html>
+	<head>
+		<title>Scraps of Random Brain Activity by Youbeen Shim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">Scraps of Random Brain Activity</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="../landing_aboutme.html">About Me</a></li>
+							<!-- <li><a href="../landing_highlights.html">Highlights</a></li> -->
+							<li><a href="../landing_projects.html">Projects, old and new</a></li>
+							<li><a href="../landing_blogposts.html">Blogposts</a></li>
+							<!-- <li><a href="../landing_notebooks.html">Notebooks</a></li> -->
+							<!-- <li><a href="../landing_interviews.html">Interviews</a></li> -->
+						</ul>
+					</nav>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+										<h1> Navigation </h1>
+										<!--
+										<li>
+											<a href="../landing_highlights.html">
+												<h3>Highlights</h3>
+												<p>Things that I'm currently most excited to share (read - may not actually be exciting)</p>
+											</a>
+										</li>
+									  -->
+									<li>
+										<a href="../landing_projects.html">
+											<h3>Projects</h3>
+											<p>Collection of various projects that I've been working on</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_blogposts.html">
+											<h3>Blogs</h3>
+											<p>Small-scale Exploratory Data Analysis and a break-down of my projects so you can follow along (if you'd like!)</p>
+										</a>
+									</li>
+									<!--
+									<li>
+										<a href="../landing_notebooks.html">
+											<h3>Notebooks</h3>
+											<p>Notes, references, and thoughts on random topics of interest to me</p>
+										</a>
+									</li>
+									<li>
+										<a href="../landing_interviews.html">
+											<h3>Interviews</h3>
+											<p>I love meeting interesting people and hearing about life, experiences, and advice - This is what they have to say</p>
+										</a>
+									</li>
+									-->
+								</ul>
+							</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="internet.html">Capturing the Loss</a></h2>
+										<p>Characterizing & understanding internet flow traffic and packet loss.</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2020-00-00">, 2020</time>
+										<a href="../landing_blogposts.html" class="author"><span class="name">Blogposts</span><img src="../images/blogposts_logo.png" alt="" /></a>
+									</div>
+								</header>
+								<!--  -->
+								<h3>Summary</h3>
+								<p>The objective of the analysis was to predict the future packet loss rate and to identify any variables that might impact the packet loss rate. The dataset includes a total of 147 observations with variables Run Number, First Flow Start Time, Flow Start Time, Duration, RTT, User Send Rate, Achieved Rate, Flow Loss Rate, and Background Traffic Loss Rate. Logistic regressions, as well as Poisson regression, were performed to identify the model of best fit. The analysis returned a model of best fit within individual runs as well as a suggestion to isolated the variables to more effectively determine their impacts.</p>
+								<h3>Introduction</h3>
+								<p>Internet traffic flow is perhaps one of the most unpredictable types of data. Usage of one user does not directly influence the other, and when one user's usage is piled upon another user's and so on, it creates a seemingly random fluctuation. While fluctuation is expected and usage follows a reasonable pattern, such as general usage trending downwards during the hours between 2 AM to 6 AM or increasing during weekends compared to weekdays, predicting the usage for the next second or the next hour without any environmental data is a daunting task.</p>
+								<p>Prof. Malathi Veerararghavan's graduate student Fatma (henceforth "Client)) requested that the below concerns be addressed:</p>
+								<ol>
+									<li>Given the simplified data concerning the past traffic rate, is sit possible to predict the future traffic rate? Alternatively, is it possible to model the packet loss rate?</li>
+									<li>Are there experimental design improvements that can lessen the magnitude of packet loss and/or variables that affect packet loss?</li>
+								</ol>
+								<p>The dataset includes a total of 147 lines of data with variables <i>Run Number</i>>, <i>First Flow Start Time</i>, <i>Flow Start Time</i>, <i>Duration</i>, <i>RTT</i>, <i>User Send Rate</i>, <i>Achieved Rate</i>, <i>Flow Loss Rate</i>, and <i>Background Traffic Loss Rate</i>. To address the Client's concerns, regression techniques including logistic regression and Poisson regression as well as statistical modeling were utilized.</p>
+								<h3>Approaches and Results</h3>
+								<p>The initial summary of data is as below.</p>
+								<span class="image center"><img src="../images/blogposts/internet/a.PNG" alt="" /></span>
+								<p>It should additionally be noted that while the majority of data (139 observations out of a total of 147) have a User Flow Loss Rate of 1.9 Gb or below, 8 outliers have greater than 1.9 Gb of loss. They are listed below. While these observations may be removed as regression models are fitted, the loss rate of 1.9 Gb is still an unacceptable amount of data loss - in an ideal setting, all loss would be at 0.01 Gb or lower.</p>
+								<span class="image center"><img src="../images/blogposts/internet/b.PNG" alt="" /></span>
+								<p>The data was transformed due to the large distance between the variables found during initial plotting. Then, we performed logistic regression on the log of User Flow Loss Rate as a function of the log of RTT, log of Duration, and log of User Send RAte to fit a regression model. [Similar regression without the Duration variable was also performed and returned analogous results.] The results are below.</p>
+								<span class="image center"><img src="../images/blogposts/internet/c.PNG" alt="" /></span>
+								<p>Similarly, Poisson regression on non-transformed data was performed on the same variables.</p>
+								<span class="image center"><img src="../images/blogposts/internet/d.PNG" alt="" /></span>
+								<p>Thus far, the model of log of User Flow Loss Rate as a function of RTT, log of Duration, and excess value(s) appear to be the best fit within individual runs. However, the coefficients for the 8 different runs remain to be checked for consistency. </p>
+								<span class="image center"><img src="../images/blogposts/internet/e.PNG" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/internet/f.PNG" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/internet/g.PNG" alt="" /></span>
+								<span class="image center"><img src="../images/blogposts/internet/h.PNG" alt="" /></span>
+								<p>While no significant results are found, a total of 8 outliers were removed.</p>
+								<h3>Conclusion</h3>
+								<p>While it was disappointing that the individual achieved flow rate was not a part of the dataset, effectively nullifying the results attained using "Excess" values, we still have high hopes for this data.</p>
+								<p>The presented dataset was a fantastic dataset for exploring possible questions that will lead to more effective datasets, and we sincerely hope that the Client stays with us to explore further into data regarding internet traffic flow. </p>
+								<p>Our recommendation for future experiments is to, if possible, set RTT to be consistent during multiple runs -initially setting at low values of RTT and gradually increasing the values for different runs- to isolate the effects of RTT. Similarly, if other variables can be isolated, it would lead to a more acute analysis of data.</p>
+								<footer>
+									<ul class="stats">
+										<li><a href="../landing_blogposts.html">Statistical Consulting</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="../landing_aboutme.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/youbeen-shim" class="icon brands fa-github-alt"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/youbeen-shim/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="../landing_aboutme.html" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/youbeanz/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Scraps of Random Brain Acivity by Youbeen Shim. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
